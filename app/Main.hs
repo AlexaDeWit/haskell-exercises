@@ -3,4 +3,4 @@ module Main where
 import           CreditCards
 
 main :: IO ()
-main = putStrLn ( show ( toDigits 123412312 ) )
+main = print $ toDigits 123412312
