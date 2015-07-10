@@ -3,8 +3,10 @@ module Homework1.CreditCards
     ) where
 
 toDigits :: Integer -> [Integer]
-toDigits 0 = []
-toDigits x = ( toDigits r ) ++ [d]
+toDigits 0 = [0]
+toDigits x
+    | x < 10    = [x]
+    | otherwise = ( toDigits r ) ++ [d]
     where
         d   = (x `mod` 10)
         r   = (x `div` 10 )
