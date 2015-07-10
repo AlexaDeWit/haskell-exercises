@@ -3,7 +3,6 @@ module Homework1.CreditCards
     ) where
 
 toDigits :: Integer -> [Integer]
-toDigits 0 = [0]
 toDigits x
     | x < 10    = [x]
     | otherwise = ( toDigits r ) ++ [d]
