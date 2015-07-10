@@ -16,3 +16,8 @@ spec = do
         it "should return a list of digits in reverse order" $ do
             toDigitsRev 5123 `shouldBe` [3,2,1,5]
             toDigitsRev 101 `shouldBe` [1,0,1]
+
+    describe "doubleEveryOther" $ do
+        it "should double every other element in a right-> left manner" $ do
+            doubleEveryOther [2,1,0,5,3,1] `shouldBe` ( reverse [1,6,5,0,1,4] )
+            doubleEveryOther [4,1,0] `shouldBe` [4,2,0]

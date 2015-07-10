@@ -1,6 +1,7 @@
 module Homework1.CreditCards
     ( toDigits,
-      toDigitsRev
+      toDigitsRev,
+      doubleEveryOther
     ) where
 
 toDigitsRev :: Integer -> [Integer]
@@ -13,3 +14,9 @@ toDigitsRev x
 
 toDigits :: Integer -> [Integer]
 toDigits x = reverse $ toDigitsRev x
+
+doubleEveryOther :: [Integer] -> [Integer]
+doubleEveryOther xs = reverse $ map f ys
+    where
+        f  = \(x,y) -> ( if y `mod` 2 == 0 then x * 2 else x) 
+        ys = zip ( reverse xs ) [1..] 
