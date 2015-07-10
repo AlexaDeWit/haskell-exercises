@@ -1,11 +1,15 @@
 module Homework1.CreditCards
-    ( toDigits
+    ( toDigits,
+      toDigitsRev
     ) where
 
-toDigits :: Integer -> [Integer]
-toDigits x
+toDigitsRev :: Integer -> [Integer]
+toDigitsRev x
     | x < 1    = []
-    | otherwise = ( toDigits r ) ++ [d]
+    | otherwise = d : ( toDigitsRev r )
     where
         d   = (x `mod` 10)
         r   = (x `div` 10 )
+
+toDigits :: Integer -> [Integer]
+toDigits x = reverse $ toDigitsRev x
