@@ -4,7 +4,7 @@ module Homework1.CreditCards
 
 toDigits :: Integer -> [Integer]
 toDigits x
-    | x < 10    = [x]
+    | x < 1    = []
     | otherwise = ( toDigits r ) ++ [d]
     where
         d   = (x `mod` 10)
