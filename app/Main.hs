@@ -1,6 +1,6 @@
 module Main where
 
-import Lib
+import           CreditCards
 
 main :: IO ()
-main = someFunc
+main = toDigits
