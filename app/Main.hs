@@ -1,6 +1,6 @@
 module Main where
 
-import           CreditCards
+import           Homework1.CreditCards
 
 main :: IO ()
 main = print $ toDigits 123412312
