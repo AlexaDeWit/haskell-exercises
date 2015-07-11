@@ -21,3 +21,8 @@ spec = do
         it "should double every other element in a right-> left manner" $ do
             doubleEveryOther [2,1,0,5,3,1] `shouldBe` ( reverse [1,6,5,0,1,4] )
             doubleEveryOther [4,1,0] `shouldBe` [4,2,0]
+
+    describe "validate" $ do
+        it "should accurately determine the validity of a credit card number" $ do
+            validate 4012888888881881 `shouldBe` True
+            validate 4012888888881882 `shouldBe` False
